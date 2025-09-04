@@ -14,13 +14,13 @@ body {
 }
 
 .calculator {
-  background-color: #000; /* Pure black background */
-  border: 2px solid #0ff; /* Laser blue border */
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 0 20px #0ff; /* Glowing laser blue shadow */
-  width: 320px;
-  max-width: 90vw;
+    background-color: #000;
+    border: 2px solid #00c853;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 20px #00c853;
+    width: 320px;
+    max-width: 90vw;
 }
 
 
@@ -32,17 +32,29 @@ body {
     padding: 10px;
     border: none;
     background: #1e1e1e;
-    color: #0ff;
+    color: #00c853;
     /* Laser blue text */
     margin-bottom: 15px;
     border-radius: 10px;
-    box-shadow: inset 0 0 5px #0ff;
+    box-shadow: inset 0 0 5px #00c853;
 }
 
 .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.function-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 10px;
+}
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 button {
@@ -50,11 +62,8 @@ button {
     padding: 20px;
     border-radius: 10px;
     background-color: #000;
-    /* Black keys */
-    color: #0ff;
-    /* Laser blue text */
-    border: 2px solid #0ff;
-    /* Laser blue border */
+    color: #00c853;
+    border: 2px solid #00c853;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s;
@@ -89,7 +98,7 @@ button:active {
     background-color: #000;
     color: #00c853;
     border: 2px solid #00c853;
-    grid-column: span 2;
+    grid-column: span 3;
     box-shadow: 0 0 10px rgba(0, 200, 83, 0.4);
 }
 
